@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554279047036.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1038921945",
+    "id" : "2A9FE5A4",
+    "lastKnownWriteTime" : 1554296268,
+    "last_content_update" : 1554296268349,
+    "path" : "C:/Users/jakub.wiatrak/Desktop/Capstone/ExploratoryAnalysis.R",
+    "project_path" : "ExploratoryAnalysis.R",
+    "properties" : {
+        "cursorPosition" : "42,49",
+        "scrollLine" : "21",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

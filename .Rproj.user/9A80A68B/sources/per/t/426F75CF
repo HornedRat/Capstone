@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554389189552.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3839398515",
+    "id" : "426F75CF",
+    "lastKnownWriteTime" : 1554392409,
+    "last_content_update" : 1554392409330,
+    "path" : "C:/Users/jakub.wiatrak/Desktop/Capstone/Report.Rmd",
+    "project_path" : "Report.Rmd",
+    "properties" : {
+        "cursorPosition" : "286,119",
+        "last_setup_crc32" : "AA5BA14072dd23b",
+        "scrollLine" : "277",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

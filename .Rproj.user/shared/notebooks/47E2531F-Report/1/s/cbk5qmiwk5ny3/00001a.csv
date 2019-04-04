@@ -1,0 +1,7 @@
+"0","#BLOGS
+wordcloud(collection[[1]]$content, max.words = 40, random.order = FALSE,colors=brewer.pal(8, ""Dark2""))
+#NEWS
+wordcloud(collection[[2]]$content, max.words = 40, random.order = FALSE,colors=brewer.pal(8, ""Dark2""))
+"
+"0","#TWITTER"
+"0","wordcloud(collection[[3]]$content, max.words = 40, random.order = FALSE,colors=brewer.pal(8, ""Dark2""))"

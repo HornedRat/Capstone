@@ -23,7 +23,7 @@ rm(blogs, news, twitter)
 ##### Sampling #####
 
 set.seed(2137)
-data <- sample_frac(data, size = 0.2)
+data <- sample_frac(data, size = 0.5)
 
 #####
 
@@ -42,33 +42,41 @@ sentences <- data %>%
     unnest_tokens(sentence, text, token = "sentences")
 rm(data)
 
-#cleaning punctuation and numbers and NAs
+#cleaning punctuation and numbers
 sentences <- sentences %>%
     mutate(sentence = gsub("[^a-z ']","", sentence)) %>%
     mutate(sentence = gsub("[ ]+", " ", sentence)) %>%
     mutate(sentence = gsub(" +$", "", sentence))
 
+gc()
+
+SBOdata <- list()
 
 #tokenizing into n-grams (up to 3) and converting it into TDMs
 unigrams <- sentences %>%
     unnest_tokens(word_1, sentence, token = "words") %>%
     filter(!is.na(word_1)) %>%
     group_by(word_1) %>%
-    summarise(n = n()) %>%
-    arrange(desc(n)) %>%
-    filter(n > 3)
-
-
+    summarise(n = n()) %>%   
+    filter(n > 3) %>%
+    arrange(desc(n))
+    
+SBOdata[[1]] <- unigrams
+rm(unigrams)
+gc()
 
 bigrams <- sentences %>%
     unnest_tokens(phrase, sentence, token = "ngrams", n = 2) %>%
     filter(!is.na(phrase)) %>%
     group_by(phrase) %>%
     summarise(n = n()) %>%
-    arrange(desc(n)) %>%
     filter(n > 3) %>%
+    arrange(desc(n)) %>%
     separate(phrase, into = c("word_1", "word_2"), sep = " ")
 
+SBOdata[[2]] <- bigrams
+rm(bigrams)
+gc()
 
 trigrams <- sentences %>%
     unnest_tokens(phrase, sentence, token = "ngrams", n = 3) %>%
@@ -79,10 +87,34 @@ trigrams <- sentences %>%
     filter(n > 3) %>%
     separate(phrase, into = c("word_1", "word_2", "word_3"), sep = " ")
 
+SBOdata[[3]] <- trigrams
+rm(trigrams)
+gc()
 
-SBOdata <- list(unigrams, bigrams, trigrams)
+quadrigrams <- sentences %>%
+    unnest_tokens(phrase, sentence, token = "ngrams", n = 4) %>%
+    filter(!is.na(phrase)) %>%
+    group_by(phrase) %>%
+    summarise(n = n()) %>%
+    filter(n > 3) %>%
+    arrange(desc(n)) %>%
+    separate(phrase, into = c("word_1", "word_2", "word_3", "word_4"), sep = " ")
 
-save(SBOdata, file = "C:\\Users\\jakub.wiatrak\\Desktop\\final\\en_US\\SBOdata")
+SBOdata[[4]] <- quadrigrams
+rm(quadrigrams)
 
+quintigrams <- sentences %>%
+    unnest_tokens(phrase, sentence, token = "ngrams", n = 5) %>%
+    filter(!is.na(phrase)) %>%
+    group_by(phrase) %>%
+    summarise(n = n()) %>%
+    filter(n > 3) %>%
+    arrange(desc(n)) %>%
+    separate(phrase, into = c("word_1", "word_2", "word_3", "word_4", "word_5"), sep = " ")
+
+SBOdata[[5]] <- quintigrams
+rm(quintigrams)
+
+save(SBOdata, file = "SBOdata")
 
 

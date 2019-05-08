@@ -58,7 +58,7 @@ unigrams <- sentences %>%
     filter(!is.na(word_1)) %>%
     group_by(word_1) %>%
     summarise(n = n()) %>%   
-    filter(n > 3) %>%
+    filter(n > 2) %>%
     arrange(desc(n))
     
 SBOdata[[1]] <- unigrams
@@ -70,7 +70,7 @@ bigrams <- sentences %>%
     filter(!is.na(phrase)) %>%
     group_by(phrase) %>%
     summarise(n = n()) %>%
-    filter(n > 3) %>%
+    filter(n > 2) %>%
     arrange(desc(n)) %>%
     separate(phrase, into = c("word_1", "word_2"), sep = " ")
 
@@ -84,7 +84,7 @@ trigrams <- sentences %>%
     group_by(phrase) %>%
     summarise(n = n()) %>%
     arrange(desc(n)) %>%
-    filter(n > 3) %>%
+    filter(n > 2) %>%
     separate(phrase, into = c("word_1", "word_2", "word_3"), sep = " ")
 
 SBOdata[[3]] <- trigrams
@@ -96,7 +96,7 @@ quadrigrams <- sentences %>%
     filter(!is.na(phrase)) %>%
     group_by(phrase) %>%
     summarise(n = n()) %>%
-    filter(n > 3) %>%
+    filter(n > 2) %>%
     arrange(desc(n)) %>%
     separate(phrase, into = c("word_1", "word_2", "word_3", "word_4"), sep = " ")
 

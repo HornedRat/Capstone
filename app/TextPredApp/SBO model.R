@@ -11,10 +11,14 @@ cleanText <- function(str) {
     return(out)
 }
 
-getWords <- function(str, n = 2) {
+getWords <- function(str, n = 3) {
     # gets the last n words from a text input
     v <- strsplit(str, split = " ")[[1]]
-    out <- v[(length(v) - n + 1):length(v)]
+    if (length(v) < n) {
+        out <- v
+    } else {
+        out <- v[(length(v) - n + 1):length(v)]
+    }
     out
 }
 

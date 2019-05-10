@@ -1,7 +1,7 @@
 ---
 title: "SBO text predictor"
 author: "Jakub Wiatrak"
-date: "10 maja 2019"
+date: "10 May 2019"
 output: ioslides_presentation
 ---
 
@@ -19,8 +19,12 @@ A software solution is needed to compensate for those shortcomings:
 - reducing the number of errors
 
 Natural Language Processing comes in handy - it allows to predict users input, like next word, based on provided source material. **The presented app uses an algorithm called SBO model to predict the next word**.
+<font size="2">
 
-<font size="2">[Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/)</font>
+- [Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/) 
+- [Github repo](https://github.com/HornedRat/Capstone)
+
+</font>
 
 ## Accuracy / performance balance
 
@@ -32,10 +36,15 @@ This app was built with a simple assumption: *it will predict the next word with
 This goal has been achieved. The average loading time for a prediction is **200 miliseconds**
 </font>
 
-```{r, out.width = "350px", fig.align='center'}
+```{r, out.width = "320px", fig.align='center'}
 knitr::include_graphics("timeplot.png")
 ```
-<font size="2">[Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/)</font>
+<font size="2">
+
+- [Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/) 
+- [Github repo](https://github.com/HornedRat/Capstone)
+
+</font>
 
 ## Understandability
 
@@ -51,7 +60,12 @@ The app is based on a powerful, yet clear and understandable text prediction mod
 
 </font>
 
-<font size="2">[Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/)</font>
+<font size="2">
+
+- [Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/) 
+- [Github repo](https://github.com/HornedRat/Capstone)
+
+</font>
 
 ## Simplicity
 
@@ -65,8 +79,13 @@ The app is intentionally as simple, as possible in order to improve user experie
 
 </font>
 
-```{r, out.width = "500px", fig.align='center'}
+```{r, out.width = "450px", fig.align='center'}
 knitr::include_graphics("layout.png")
 ```
 
-<font size="2">[Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/)</font>
+<font size="2">
+
+- [Click here to access the app](https://hornedrat.shinyapps.io/TextPredApp/) 
+- [Github repo](https://github.com/HornedRat/Capstone)
+
+</font>

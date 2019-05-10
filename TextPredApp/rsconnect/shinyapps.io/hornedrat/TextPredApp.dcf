@@ -1,0 +1,12 @@
+name: TextPredApp
+title: TextPredApp
+username:
+account: hornedrat
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 914950
+bundleId: 2074762
+url: https://hornedrat.shinyapps.io/TextPredApp/
+when: 1557484345.80956
+asMultiple: FALSE
+asStatic: FALSE
